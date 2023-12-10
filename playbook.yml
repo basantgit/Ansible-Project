@@ -1,0 +1,7 @@
+---
+- name: webserver
+  hosts: webhost
+  gather_facts: yes
+    -task:
+      name: httpd
+      state: latest
