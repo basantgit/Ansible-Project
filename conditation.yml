@@ -1,0 +1,17 @@
+---
+- name: Install nginx webserver on remot server
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Insatall nginx application RedHat
+    yum:
+      name: apache2
+      state: present
+    when: ansible_os_family == "RedHat"
+
+  - name: install  the nginx service Ubuntu
+    apt:
+      name: nginx
+      state: present
+    when: ansible_os_family == "Debian"

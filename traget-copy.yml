@@ -1,0 +1,15 @@
+---
+- name: copy the file from server to traget machine
+  hosts: all
+  become: true
+
+  tasks:
+  - name: copy the file from server to traget machine
+    copy:
+      src: /home/ubuntu/playbook/traget
+      dest: /root
+      owner: basant
+      group: basant
+      mode: ugo=rw
+      backup: true
+

@@ -1,0 +1,13 @@
+---
+- name: Download software from internet
+  hosts: all
+  become: 1
+
+  tasks:
+  - name:
+    get_url:
+      url: https://www.python.org/ftp/python/3.12.3/python-3.12.3-amd64.exe
+      dest: /tmp
+      owner: basant
+      group: basant
+      mode: 0777

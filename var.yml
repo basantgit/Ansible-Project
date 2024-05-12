@@ -1,0 +1,19 @@
+---
+- name: Install and start the service
+  hosts: all
+  become: 1
+  vars:
+    - app: nginx
+
+  tasks:
+  - name: Install Nginx
+    apt:
+      name: "{{ app }}"
+      state: present
+    tags: i-nginx
+  - name:
+    service:
+      name: "{{ app }}"
+      state: started
+      enabled: true
+    tags: ss-nginx
