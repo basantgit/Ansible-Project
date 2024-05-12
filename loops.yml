@@ -11,3 +11,12 @@
       name: "{{ item }}"
       state: present
     with_item: "{{ apps }}"
+
+  - name:
+      user: "{{ item }}"
+      shell: /bin/bash
+      comments: QA Team,Dev team
+    loops:
+      - basant
+      - mohanty
+      - kumar
