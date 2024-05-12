@@ -1,0 +1,11 @@
+---
+- name: Basic playbook
+  hosts: all
+
+  tasks:
+  - name: Test Connectivity
+    ping:
+
+  - name: "take the correct name"
+    debug: msg=hello
+

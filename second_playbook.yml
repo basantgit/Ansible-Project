@@ -1,0 +1,15 @@
+---
+- name: Install nginx webserver on remot server
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Insatall nginx application
+    apt: 
+      name: nginx
+      state: present
+  - name: Starting the nginx service
+    service:
+      name: nginx
+      state: started
+      enabled: true

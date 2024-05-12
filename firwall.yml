@@ -1,0 +1,16 @@
+---
+- name:
+  hosts: all
+  become: 1
+
+  tasks:
+  - name:
+    firewalld:
+      port: 80/tcp
+      permanent: true
+      state: enabled
+
+  - name:
+    service:
+      name: firewalld
+      state: reloaded

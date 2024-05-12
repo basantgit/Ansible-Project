@@ -1,0 +1,18 @@
+---
+- name: File module
+  hosts: all
+  become: true
+
+  tasks:
+  - name: creating a file on traget servet
+    file:
+      path: /tmp/basant.txt
+      state: absent
+      owner: basant
+      group: basant
+      mode: u=rwx,g=w
+
+  - name: create a directory on traget machine
+    file:
+      path: /tmp/myfolder
+      state: absent

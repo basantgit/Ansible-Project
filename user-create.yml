@@ -1,0 +1,15 @@
+---
+- name: Create a usr on host machine
+  hosts: all
+  become: 1
+
+  tasks:
+  - name:
+    user:
+      name: "{{ item }}"
+      comment: Mohanty belong from QA team
+      shell: /bin/bash
+    loop:
+      - Raju
+      - Sam
+      - Baburao

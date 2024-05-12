@@ -1,0 +1,16 @@
+---
+- name: Set the cron job on remote host
+  hosts: all
+  become: 1
+
+  tasks: At cronjob
+  - name:
+    cron:
+      name: Run test script
+      minute: 30
+      hour: 18
+      day: 11
+      month: "*"
+      weekday: "*"
+      user: root
+      job: /tmp/script.sh

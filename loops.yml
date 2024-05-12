@@ -1,0 +1,13 @@
+---
+- name: Install all applications given below list
+  hosts: all
+  become: 1
+  vars:
+    - apps: [vim,ping]
+
+  tasks:
+  - name: install application
+    apt:
+      name: "{{ item }}"
+      state: present
+    with_item: "{{ apps }}"
