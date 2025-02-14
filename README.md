@@ -20,4 +20,4 @@ Setup – This is very easy to set up with a very low learning curve and any ope
 
 Manage Inventory – Machines’ addresses are stored in a simple text format and we can add different sources of truth to pull the list using plugins such as Openstack, Rackspace, etc.
 
-Password less aut - ssh-copy-id -f "-o identityFile .pem"  ubuntu@54.210.244.136
+Password less auth - ssh-copy-id -f "-o identityFile .pem"  ubuntu@54.210.244.136
